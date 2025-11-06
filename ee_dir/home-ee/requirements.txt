@@ -1,0 +1,4 @@
+Proxmoxer==2.2.0
+passlib==1.7.4
+pywinrm==0.4.3
+requests==2.32.3
