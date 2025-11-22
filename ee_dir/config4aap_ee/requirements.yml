@@ -1,0 +1,10 @@
+---
+collections:
+  - name: ansible.platform
+    version: 2.6.20251106
+  - name: ansible.hub
+    version: 1.0.3
+  - name: ansible.controller
+    version: 4.7.1
+  - name: ansible.eda
+  - name: infra.aap_configuration
