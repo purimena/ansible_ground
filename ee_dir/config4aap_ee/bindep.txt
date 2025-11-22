@@ -1,8 +1,4 @@
-python3-pip
-python3-setuptools
-python3-wheel
 pkg-config
-gcc
-python3-devel
 systemd-devel
+gcc
 python3.11-devel
