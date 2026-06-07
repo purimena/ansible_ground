@@ -1,0 +1,30 @@
+---
+version: 3
+
+images:
+  base_image:
+    name: registry.redhat.io/ansible-automation-platform/ee-minimal-rhel8:2.18
+
+dependencies:
+  python_interpreter:
+    python_path: /usr/bin/python3.12
+
+  galaxy:
+    collections:
+      - name: ansible.netcommon
+        source: private_hub_community
+      - name: ansible.posix
+        source: private_hub_community
+      - name: ansible.utils
+        source: private_hub_community
+      - name: community.general
+        source: private_hub_community
+
+additional_build_steps:
+  prepend_galaxy:
+    - ARG ANSIBLE_GALAXY_SERVER_PRIVATE_HUB_RH_CERTIFIED_TOKEN
+    - ARG ANSIBLE_GALAXY_SERVER_PRIVATE_HUB_VALIDATED_TOKEN
+    - ARG ANSIBLE_GALAXY_SERVER_PRIVATE_HUB_COMMUNITY_TOKEN
+
+options:
+  package_manager_path: /usr/bin/microdnf
